@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="te.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        /* Custom styles for smooth scrolling and active nav link highlighting */
+        .nav-link.active {
+            color: #3b82f6; /* blue-500 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-white">MyPortfolio</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-blue-400 transition-colors duration-300">Home</a>
+                <a href="#about" class="nav-link hover:text-blue-400 transition-colors duration-300">About</a>
+                <a href="#projects" class="nav-link hover:text-blue-400 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="nav-link hover:text-blue-400 transition-colors duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-200 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="#home" class="block py-2 px-6 text-sm hover:bg-gray-700">Home</a>
+            <a href="#about" class="block py-2 px-6 text-sm hover:bg-gray-700">About</a>
+            <a href="#projects" class="block py-2 px-6 text-sm hover:bg-gray-700">Projects</a>
+            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-gray-700">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <img src="Photo1.jpg" alt="Profile Picture" class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Hi, I'm Anil C Uppin</h1>
+                    <p class="text-xl md:text-2xl text-blue-300 mb-8">A Creative Web Developer & Designer</p>
+                    <p class="max-w-2xl mx-auto text-gray-400 mb-10">
+                        I specialize in building exceptional, high-quality websites and applications.
+                        Welcome to my personal corner of the internet.
+                    </p>
+                    <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 duration-300">
+                        View My Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">About Me</h2>
+                    <p class="text-lg text-gray-400 mt-2">A little bit about my journey and skills.</p>
+                    <div class="h-1 w-20 bg-blue-500 mx-auto mt-4"></div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3">
+                         <img src="https://placehold.co/600x600/1f2937/a5b4fc?text=About" alt="About Me Image" class="rounded-lg shadow-2xl w-full">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-3xl font-semibold text-white mb-4">Crafting Digital Experiences</h3>
+                        <p class="text-gray-300 mb-6">
+                            Hello! I'm Anil C Uppin, a developer with a passion for creating beautiful and functional web experiences. With over 5 years in the industry, I've had the privilege of working on a diverse range of projects, from small business websites to large-scale enterprise applications.
+                        </p>
+                        <p class="text-gray-300 mb-8">
+                            My goal is to combine clean code with user-centric design to solve problems and deliver outstanding results. I'm always eager to learn new technologies and take on challenging projects.
+                        </p>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <div class="bg-gray-700 p-4 rounded-lg text-center">
+                                <p class="font-bold text-white">HTML & CSS</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg text-center">
+                                <p class="font-bold text-white">JavaScript</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg text-center">
+                                <p class="font-bold text-white">React</p>
+                            </div>
+                             <div class="bg-gray-700 p-4 rounded-lg text-center">
+                                <p class="font-bold text-white">Node.js</p>
+                            </div>
+                             <div class="bg-gray-700 p-4 rounded-lg text-center">
+                                <p class="font-bold text-white">Tailwind CSS</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">My Projects</h2>
+                    <p class="text-lg text-gray-400 mt-2">A selection of my recent work.</p>
+                     <div class="h-1 w-20 bg-blue-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Project Card 1 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300">
+                        <img src="https://placehold.co/600x400/1f2937/a5b4fc?text=Project+1" alt="Project 1" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Agrixpert-The complete companion of farmer</h3>
+                            <p class="text-gray-400 mb-4">A smart farming platform offering real-time guidance, crop insights, weather forecasts, and 
+                            market trends to empower farmers . 
+                            Aimed at enhancing productivity and empowering rural communities through technology
+                                driven farming practices. </p>
+                            <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">View Details &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300">
+                        <img src="https://placehold.co/600x400/1f2937/a5b4fc?text=Project+2" alt="Project 2" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Contact Management System </h3>
+                            <p class="text-gray-400 mb-4">A collaborative to-do list application with real-time updates.</p>
+                            <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">View Details &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300">
+                        <img src="https://placehold.co/600x400/1f2937/a5b4fc?text=Project+3" alt="Project 3" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Portfolio Website Template</h3>
+                            <p class="text-gray-400 mb-4">A sleek, responsive portfolio template designed with Tailwind CSS.</p>
+                            <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">View Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">Contact Me</h2>
+                    <p class="text-lg text-gray-400 mt-2">I'd love to hear from you!</p>
+                     <div class="h-1 w-20 bg-blue-500 mx-auto mt-4"></div>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                    <div id="form-message" class="mt-6 text-center"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <div class="flex justify-center space-x-6 mb-4">
+                 <a href="#" class="hover:text-blue-400 transition-colors">GitHub</a>
+                 <a href="#" class="hover:text-blue-400 transition-colors">LinkedIn</a>
+                 <a href="#" class="hover:text-blue-400 transition-colors">Twitter</a>
+            </div>
+            <p>&copy; 2024 Anil c uppin. All Rights Reserved.</p>
+
+        </div>
+    </footer>
